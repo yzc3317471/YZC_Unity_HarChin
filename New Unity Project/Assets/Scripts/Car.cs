@@ -105,7 +105,18 @@ public class Car : MonoBehaviour
         print("音效" + sound );
         print("特效" + effect);
     }
- 
+    private int square(int number)
+    {
+        return number * number;
+    }
+
+    private float BMI(float weight, float height)
+    {
+        return weight / (height * height);
+    }
+
+
+
     #endregion
     #region 事件
     //事件 Event - 在特定時間點會已指定次數執行(程式的入口)
@@ -121,8 +132,16 @@ public class Car : MonoBehaviour
         //有幾個參數就要輸入幾個
         Drive(99, "咻咻咻", "灰塵");
         Drive(444, "轟轟轟", "爆炸");
-
+        //有預設值可以不用填
         Drive(50);
+        //有多個預設值參數時，指定方式 參數名稱:
+        Drive(30, effect: "爆炸特效");
+
+        int r = square(9);
+
+        float Yzc = BMI(86, 1.78f);
+        print("Yzc的BMI" + Yzc);
+
 
     }
     #endregion
