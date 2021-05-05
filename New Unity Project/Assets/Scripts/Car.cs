@@ -3,18 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Car : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+{ 
+#region 欄位
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     //單行註解 SOSO 2021.04.28
 
     /*
@@ -79,5 +70,60 @@ public class Car : MonoBehaviour
     public Transform tra;
     public Camera cam;
     public AudioListener aud;
+    #endregion
 
+    #region 方法
+    //欄位語法
+    //修飾詞 類型 名稱 指定 值 ;
+
+    //方法 Method - 儲存城市區塊或演算法
+    //語法;
+    //修飾詞 傳回類型 名稱( ) {城市區塊或演算法}
+    //void 無傳回 - 沒有傳回資料
+    /// <summary>
+    /// YZC 2021.05.05
+    /// 這是一個會輸出訊息的測試方法
+    /// </summary>
+    private void Test()
+    {
+        //輸出(任何資料類型)
+        print("我是測試方法");
+
+    }
+    private void Drivre50()
+    {}
+    //參數語法:類型 名稱
+    //呼叫的時候可以決定參數的值
+    //類型 名稱，類型 名稱... ...
+    /// <summary>
+    /// <param name="speed">速度</param>>
+    /// <param name="sound">音效</param>
+    /// <param name="effect">特效</param>
+    private void Drive(int speed, string sound = "ㄏㄏㄏ", string effect = "光芒")
+    {
+        print("開車速度" + speed);
+        print("音效" + sound );
+        print("特效" + effect);
+    }
+ 
+    #endregion
+    #region 事件
+    //事件 Event - 在特定時間點會已指定次數執行(程式的入口)
+    //開始事件:播放遊戲後會執行一次
+    //應用:初始值，初始金錢，初始HP等等... ...
+
+    private void Start()
+    {
+        //呼叫方法
+        //方法名稱();
+        Test();
+        Drivre50();
+        //有幾個參數就要輸入幾個
+        Drive(99, "咻咻咻", "灰塵");
+        Drive(444, "轟轟轟", "爆炸");
+
+        Drive(50);
+
+    }
+    #endregion
 }
